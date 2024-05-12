@@ -30,12 +30,20 @@ Virtual Box Network Settings should be changed to be in same subnet. Network Set
 Virtual box machine should be run as a server machine. First check Virtual Box machine ip using ifconfig command. I assume this machine ip is 172.20.10.3 . Check other Ubuntu Machine ip address, I assume this machine ip is 172.20.10.4.
 First terminal of Virtual Box Machine:
 ```bash
+sudo ufw enable
+sudo ufw allow from 172.20.10.4
+sudo ufw allow to 172.20.10.4 
+sudo ufw status
 export ROS_MASTER_URI=http://export ROS_MASTER_URI=http://172.20.10.3:11311
 export ROS_IP=172.20.10.3
 roscore
 ```
 Terminal of Ubuntu Machine:
 ```bash
+sudo ufw enable
+sudo ufw allow from 172.20.10.3 
+sudo ufw allow to 172.20.10.3
+sudo ufw status
 export ROS_MASTER_URI=http://export ROS_MASTER_URI=http://172.20.10.3:11311
 export ROS_IP=172.20.10.4
 #if there is saved bag file
