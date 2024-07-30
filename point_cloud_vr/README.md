@@ -77,7 +77,7 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 - Right-click and select XR > Device_based > XR Origin(VR).
 - Add enableOpenGL.cs script to the Main Camera.
 - Attach PointCloudSubscriber.cs to the RosConnector object (assuming ROSConnector is added). Configure the point cloud topic name.
-![screenshot](ROSConnector.PNG)
+![screenshot](RosConnector.PNG)
 - Create a pointCloudRenderer for PointCloudRenderer.cs.
 - Drag RosConnector to the Subscriber field and set the Point Size in PointCloudRenderer.cs.
 ![screenshot](PointCloudRenderer.PNG)
