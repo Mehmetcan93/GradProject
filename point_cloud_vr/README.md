@@ -73,13 +73,13 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 - PointCloudShader.shader: Contains a _PointSize property and should not be renamed.
 
 ### Unity VR Setup Steps:
-![screenshot](Hierarchy.png)
+![screenshot](Hierarchy.PNG)
 - Right-click and select XR > Device_based > XR Origin(VR).
 - Add enableOpenGL.cs script to the Main Camera.
 - Attach PointCloudSubscriber.cs to the RosConnector object (assuming ROSConnector is added). Configure the point cloud topic name.
-![screenshot](ROSConnector.png)
+![screenshot](ROSConnector.PNG)
 - Create a pointCloudRenderer for PointCloudRenderer.cs.
 - Drag RosConnector to the Subscriber field and set the Point Size in PointCloudRenderer.cs.
-![screenshot](PointCloudRenderer.png)
+![screenshot](PointCloudRenderer.PNG)
 - Link the camera offset to the Offset in PointCloudRenderer.cs to position the point clouds correctly.
-![screenshot](CameraOffset.png)
+![screenshot](CameraOffset.PNG)
